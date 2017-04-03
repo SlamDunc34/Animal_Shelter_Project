@@ -1,3 +1,18 @@
-<h1>Animal Shelter</h1>
+<h1>Adoptions</h1>
 
-<p>print words</p>
+<p class="btn--wrapper">
+  <a class="btn btn--action" href="/adoptions/new">Adopt</a>
+</p>
+
+<ul>
+  <% for adoption in @adoptions %>
+  <li>
+  <p><%= adoption.animal.name %> <%= adoption.owner.name %> </p>
+    <p>
+      <form action="/adoptions/<%= adoption.id %>/delete" method="POST">
+        <input class="btn btn--danger" type="submit" value="delete" />
+      </form>
+    </p>
+  </li>
+  <% end %>
+</ul>

@@ -1,1 +1,31 @@
-<h1>adoption new erb</h1>
+<h1>Adopt a new friend</h1>
+
+<form action="/adoptions" method="post">
+  <p>
+  Select an animal:
+  </p>
+  <p>
+    <label>
+      <select name="animal_id">
+        <% for animal in @animals %>
+        <option value="<%= animal.id %>"><%= animal.name %></option>
+        <% end %>
+      </select>
+    </label>
+  </p>
+
+  <p>
+    Select a new owner:
+  </p>
+  <p>
+    <label>
+      <select name="owner_id">
+        <% for owner in @owners %>
+        <option value="<%= owner.id %>"><%= owner.name %></option>
+        <% end %>
+      </select>
+    </label>
+  </p>
+
+  <input class="btn btn--action" type='submit' value="Adopt">
+</form>
