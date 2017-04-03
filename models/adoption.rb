@@ -26,6 +26,17 @@ class Adoption
     return results.map { |hash| Adoption.new( hash ) }
   end
 
+  def animal()
+    sql = "SELECT * FROM animals WHERE id = #{@animal_id}"
+    result = SqlRunner.run(sql).first
+    return Animal.new(result)
+  end
+
+  def owner()
+    sql = "SELECT * FROM owners WHERE id = #{@owner_id}"
+    result = SqlRunner.run(sql).first
+    return Owner.new(result)
+  end
 
   def self.delete_all
     sql = "DELETE FROM adoptions"
@@ -36,5 +47,17 @@ class Adoption
     sql = "DELETE FROM adoptions where id = #{id}"
     SqlRunner.run( sql )
   end
+
+  def delete()
+    sql = "DELETE FROM adoptions WHERE id =#{id}"
+    SqlRunner.run(sql)
+  end
+
+  # def update()
+  #   sql = "UPDATE adoptions SET
+  #     name = '#{ @name }',
+  #     address = '#{ @address }';"
+  #   SqlRunner.run( sql )
+  # end
 
 end

@@ -13,28 +13,32 @@ Animal.delete_all
 
 animal1 = Animal.new({
   'name' => "The Danger",
-  'species' => 'Dog'
+  'species' => 'Dog',
+  'admission_date' => '2016-08-24'
 })
 
 animal1.save
 
 animal2 = Animal.new({
   'name' => "Thundercock",
-  'species' => 'Lion'
+  'species' => 'Lion',
+  'admission_date' => '2011-04-12'
 })
 
 animal2.save
 
 animal3 = Animal.new({
   'name' => "Beans",
-  'species' => 'Can_of_beans'
+  'species' => 'Can_of_beans',
+  'admission_date' => '1972-03-30'
 })
 
 animal3.save
 
 animal4 = Animal.new({
   'name' => "Granny",
-  'species' => 'Camel_spider'
+  'species' => 'Camel_spider',
+  'admission_date' => '2008-12-06'
 })
 
 animal4.save

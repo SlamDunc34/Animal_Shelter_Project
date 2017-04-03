@@ -9,8 +9,8 @@ CREATE TABLE animals
   name VARCHAR(255) NOT NULL,
   species VARCHAR(255),
   admission_date DATE,
-  bio TEXT,
-  adoptable BOOLEAN
+  adoptable BOOLEAN,
+  bio TEXT
 );
 
 CREATE TABLE owners
