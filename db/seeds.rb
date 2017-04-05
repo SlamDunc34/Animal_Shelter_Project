@@ -13,9 +13,9 @@ Animal.delete_all
 
 animal1 = Animal.new({
   'name' => "The Danger",
-  'species' => 'Dog',
+  'breed' => 'Pomeranian',
   'admission_date' => '2016-08-24',
-  'adoptable' => 'false',
+  'adoptable' => 'true',
   'issues' => 'eats grannies'
 })
 
@@ -23,9 +23,9 @@ animal1.save
 
 animal2 = Animal.new({
   'name' => "Thundercock",
-  'species' => 'Lion',
+  'breed' => 'Great Dane',
   'admission_date' => '2011-04-12',
-  'adoptable' => 'false',
+  'adoptable' => 'true',
   'issues' => 'rules with an iron fist'
 })
 
@@ -33,7 +33,7 @@ animal2.save
 
 animal3 = Animal.new({
   'name' => "Beans",
-  'species' => 'Can_of_beans',
+  'breed' => 'Terrier',
   'admission_date' => '1972-03-30',
   'adoptable' => 'true',
   'issues' => 'likes to poo on the bus'
@@ -42,39 +42,43 @@ animal3 = Animal.new({
 animal3.save
 
 animal4 = Animal.new({
-  'name' => "Granny",
-  'species' => 'Camel_spider',
+  'name' => "Steven",
+  'breed' => 'Bulldog',
   'admission_date' => '2008-12-06',
-  'adoptable' => 'true',
+  'adoptable' => 'false',
   'issues' => 'thief'
 })
 
 animal4.save
 
 owner1 = Owner.new({
-  'name' => "Joe",
-  'address' => '12 Road, Motherwell'
+  'name' => "Macho Man Randy Savage",
+  'address' => '12 Road, Motherwell',
+  'details' => 'Randy would like an enormous dog as he is concerned that people think he is not macho'
 })
 
 owner1.save
 
 owner2 = Owner.new({
-  'name' => "Kate",
-  'address' => '3 Place, Dunfermline'
+  'name' => "Trumplestiltskin",
+  'address' => '3 Place, Dunfermline',
+  'details' => 'The Donald is interested in adopting a small dog to suit his small hands. He would also prefer a dog that holds deep resentment for the working class'
 })
 
 owner2.save
 
 owner3 = Owner.new({
-  'name' => "Barry",
-  'address' => '87 Lane, Nairn'
+  'name' => "David Mowat MP",
+  'address' => '87 Lane, Nairn',
+  'details' => 'As part of his job as Parliamentary Under Secretary of State at the Department of Health, David must ensure that decent social care is provided to the elderly and disabled. David is looking for a dog that helps relieve some of his stress at work'
 })
 
 owner3.save
 
 owner4 = Owner.new({
-  'name' => "Dave",
-  'address' => "54 avenue, Kirkwall"
+  'name' => "Mary",
+  'address' => "54 avenue, Kirkwall",
+  'details' => 'Mary is an elderly pensioner who is not interested in dogs and signed up to the website by mistake. She has no idea how close she came to death'
 })
 
 owner4.save

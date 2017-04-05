@@ -3,12 +3,12 @@ require('pry-byebug')
 
 class Animal
 
-  attr_reader( :name, :species, :admission_date, :adoptable, :issues, :id )
+  attr_reader( :name, :breed, :admission_date, :adoptable, :issues, :id )
 
   def initialize( options )
     @id = nil || options['id'].to_i
     @name = options['name']
-    @species = options['species']
+    @breed = options['breed']
     @admission_date = options['admission_date']
     @adoptable = options['adoptable']
     @issues = options['issues']
@@ -16,9 +16,9 @@ class Animal
 
   def save()
     sql = "INSERT INTO animals (
-      name, species, admission_date, adoptable, issues
+      name, breed, admission_date, adoptable, issues
     ) VALUES (
-      '#{ @name }','#{ @species }','#{@admission_date}','#{@adoptable}','#{@issues}'
+      '#{ @name }','#{ @breed }','#{@admission_date}','#{@adoptable}','#{@issues}'
     ) RETURNING *"
     results = SqlRunner.run(sql)
     @id = results.first()['id'].to_i
@@ -48,19 +48,19 @@ class Animal
   end
 
   def update()
-    sql = "UPDATE animals SET name = '#{@name}', species = '#{species}', admission_date = '#{admission_date}', adoptable = '#{@adoptable}', issues ='#{@issues}' WHERE id = #{@id}"
+    sql = "UPDATE animals SET name = '#{@name}', breed = '#{breed}', admission_date = '#{admission_date}', adoptable = '#{@adoptable}', issues ='#{@issues}' WHERE id = #{@id}"
     results = SqlRunner.run(sql)
     #@id = results.first()['id'].to_i
   end
 
-  def adopted()
-    @adoptable = 'false'
-    update()
-  end
+  # def adopted()
+  #   @adoptable = 'false'
+  #   update()
+  # end
 
-  def abandon()
-    @adoptable = 'true'
-    update()
-  end
+  # def abandon()
+  #   @adoptable = 'true'
+  #   update()
+  # end
 
 end

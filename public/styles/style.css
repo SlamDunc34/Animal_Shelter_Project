@@ -19,6 +19,7 @@ body {
 
 }
 
+
 table.center {
   margin-left: auto;
   margin-right: auto;
@@ -34,4 +35,9 @@ ul {
 
 h1 {font-size: 150px;
   color: green;}
+
+h2 {font-size: 100px;
+  color: green;}
+
+
 

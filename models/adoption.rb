@@ -18,8 +18,8 @@ class Adoption
     ) RETURNING *"
     results = SqlRunner.run(sql)
     @id = results.first()['id'].to_i
-    #Animal.find(@animal_id).adopted()
-    animal.adopted()
+    Animal.find(@animal_id).adopted()
+  #   animal.adopted()
   end
 
   def self.all()

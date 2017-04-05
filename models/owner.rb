@@ -2,19 +2,20 @@ require_relative( '../db/sql_runner' )
 
 class Owner
 
-  attr_reader( :name, :address, :id )
+  attr_reader( :name, :address, :details, :id )
 
   def initialize( options )
     @id = nil || options['id'].to_i
     @name = options['name']
     @address = options['address']
+    @details = options['details']
   end
 
   def save()
     sql = "INSERT INTO owners (
-      name, address
+      name, address, details
     ) VALUES (
-      '#{ @name }','#{ @address}'
+      '#{ @name }','#{ @address}','#{ @details}'
       ) RETURNING *"
     results = SqlRunner.run(sql)
     @id = results.first()['id'].to_i
