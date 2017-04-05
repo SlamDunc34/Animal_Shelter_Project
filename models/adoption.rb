@@ -18,6 +18,8 @@ class Adoption
     ) RETURNING *"
     results = SqlRunner.run(sql)
     @id = results.first()['id'].to_i
+    #Animal.find(@animal_id).adopted()
+    animal.adopted()
   end
 
   def self.all()
@@ -46,18 +48,14 @@ class Adoption
   def self.destroy(id)
     sql = "DELETE FROM adoptions where id = #{id}"
     SqlRunner.run( sql )
+    animal().abandon()
   end
 
   def delete()
     sql = "DELETE FROM adoptions WHERE id =#{id}"
     SqlRunner.run(sql)
+    animal().abandon()
   end
 
-  # def update()
-  #   sql = "UPDATE adoptions SET
-  #     name = '#{ @name }',
-  #     address = '#{ @address }';"
-  #   SqlRunner.run( sql )
-  # end
 
 end

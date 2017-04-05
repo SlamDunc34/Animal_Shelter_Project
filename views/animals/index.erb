@@ -1,12 +1,18 @@
 <h1>Animals</h1>
 
-<table>
+
+<table class= "center" >
+
   <tr>
     <th>Name</th>
     <th></th>
     <th>Species</th>
     <th></th>
     <th>Admission Date</th>
+    <th></th>
+    <th>Adoptable</th>
+    <th></th>
+    <th>Issues</th>
   </tr>
   <% for animal in @animals %>
   <tr>
@@ -15,6 +21,10 @@
     <td><%= animal.species %></td>
     <td>|</td>
     <td><%= animal.admission_date %></td>
+    <td>|</td>
+    <td><%= animal.adoptable%></td>
+    <td>|</td>
+    <td><%= animal.issues%></td>
   </tr>
   <% end %>
 </table>

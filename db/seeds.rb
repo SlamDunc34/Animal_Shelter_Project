@@ -14,7 +14,9 @@ Animal.delete_all
 animal1 = Animal.new({
   'name' => "The Danger",
   'species' => 'Dog',
-  'admission_date' => '2016-08-24'
+  'admission_date' => '2016-08-24',
+  'adoptable' => 'false',
+  'issues' => 'eats grannies'
 })
 
 animal1.save
@@ -22,7 +24,9 @@ animal1.save
 animal2 = Animal.new({
   'name' => "Thundercock",
   'species' => 'Lion',
-  'admission_date' => '2011-04-12'
+  'admission_date' => '2011-04-12',
+  'adoptable' => 'false',
+  'issues' => 'rules with an iron fist'
 })
 
 animal2.save
@@ -30,7 +34,9 @@ animal2.save
 animal3 = Animal.new({
   'name' => "Beans",
   'species' => 'Can_of_beans',
-  'admission_date' => '1972-03-30'
+  'admission_date' => '1972-03-30',
+  'adoptable' => 'true',
+  'issues' => 'likes to poo on the bus'
 })
 
 animal3.save
@@ -38,7 +44,9 @@ animal3.save
 animal4 = Animal.new({
   'name' => "Granny",
   'species' => 'Camel_spider',
-  'admission_date' => '2008-12-06'
+  'admission_date' => '2008-12-06',
+  'adoptable' => 'true',
+  'issues' => 'thief'
 })
 
 animal4.save

@@ -10,7 +10,7 @@ CREATE TABLE animals
   species VARCHAR(255),
   admission_date DATE,
   adoptable BOOLEAN,
-  bio TEXT
+  issues TEXT
 );
 
 CREATE TABLE owners
@@ -18,7 +18,7 @@ CREATE TABLE owners
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   address VARCHAR,
-  email VARCHAR,
+  adopted_animal VARCHAR,
   details TEXT,
   animal_id INT8 REFERENCES animals(id)
 );

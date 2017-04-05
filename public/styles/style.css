@@ -1,0 +1,37 @@
+a:visited {
+  color: orange
+}
+
+a:hover {
+  color: red
+}
+
+body {
+  text-align: center;
+  background: black url('/images/angry_dog.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: 'Copperplate', serif;
+  padding: 0px;
+  margin: 0px;
+
+}
+
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th {
+  height: 75px;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {font-size: 150px;
+  color: green;}
+
